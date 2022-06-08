@@ -2,7 +2,7 @@ const http = require("http");
 const express = require("express");
 const bodyParser = require("body-parser");
 const adviceRouter = require("./routes/fetch");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(helmet);
+// app.use(helmet);
 
 app.use("/fetch", adviceRouter);
 
