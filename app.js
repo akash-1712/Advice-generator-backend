@@ -28,4 +28,4 @@ app.use((error, req, res, next) => {
   res.status(500).json({ message: "Failed", error: error.message });
 });
 
-app.listen(8080);
+app.listen(process.env.PORT || 8080);
